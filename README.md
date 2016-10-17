@@ -49,7 +49,7 @@ Your build.mak.in file, for its export APP_LDLIBS command must look like this:
 
 When that is finished build your PJSIP via these commands:
 
-      export ANDROID_NDK_ROOT=/Users/rj-mac/Desktop/android-ndk-r10b
+      export ANDROID_NDK_ROOT=<Path of your NDK>
       export CFLAGS="-O2 -DNDEBUG"
       cd <Path of your PJSIP source>
       ./configure-android  --disable-silk --disable-speex-codec --disable-gsm-codec --disable-l16-codec --disable-speex-aec --disable-          g722-codec --disable-ilbc-codec --disable-g711-codec --disable-g729-codec --disable-floating-point 
