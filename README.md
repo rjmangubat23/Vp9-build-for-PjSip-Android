@@ -5,7 +5,7 @@ This is a quick guide for building VP9 codec for android and PJSIP
 Note: I am using mac OS 
 
 
-First, Acquire the VP9 codec using this commands via your terminal:
+First, Acquire the VP9 codec using these commands via your terminal:
 
     git clone https://chromium.googlesource.com/webm/libvpx
     cd libvpx
