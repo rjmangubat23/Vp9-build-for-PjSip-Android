@@ -45,7 +45,7 @@ Your build.mak.in file, for its export APP_LDLIBS command must look like this:
         $(APP_THIRD_PARTY_LIBS)\
         $(APP_THIRD_PARTY_EXT)\
         $(PJLIB_LDLIB) \
-        @LIBS@ -lvpx 
+        @LIBS@ -lvpx 
 
 When that is finished build your PJSIP via these commands:
 
