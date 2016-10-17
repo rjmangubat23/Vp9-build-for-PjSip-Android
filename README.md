@@ -23,9 +23,9 @@ Then, Unzip the PJSIP source, if you are using the tar.bz2 file like me, unzip i
     
     tar zxf <Path of your PJSIP source>
     
-After that, take your libvpx.a file which was previously built on your VP9 source and copy it and paste it on the <third party> libs folder of your PJSIP source which can be found on this path: /<Path of your PJSIP source>/third_party/lib
+After that, take your libvpx.a file which was previously built on your VP9 source and copy it and paste it on the <third party> libs folder of your PJSIP source which can be found on this path: /(Path of your PJSIP source)/third_party/lib
 
-Next, Go to the build.mak.in file of your PJSIP source, which can be found in /<Path of your PJSIP source>/build.mak.in 
+Next, Go to the build.mak.in file of your PJSIP source, which can be found in /(Path of your PJSIP source)/build.mak.in 
 Open it with whichsoever notepad you use(I use atom), goto line 279 (which it usually is) or look for via search, "@LIBS@" which is in the export APP_LDLIBS command and paste "-lvpx" which will make your makefile locate for the VP9 codec library via the third_party libraries 
 linked to pjsip. 
 
