@@ -14,7 +14,7 @@ First, Acquire the VP9 codec using these commands via your terminal:
     --disable-vp8-encoder --disable-vp8-decoder --disable-examples --enable-static --enable-pic --enable-vp9 
     --disable-runtime-cpu-detect --disable-vp8 --disable-neon
     make
-If you see a libvpx.a file inside your folder after make then you are good to go. 
+If you see a libvpx.a file inside your folder, you have now successfully built a VP9 codec static library. 
 
 After that, download the latest PJSIP source via http://www.pjsip.org/download.htm, for this guide we will be using version 2.5.5 
 Note: I prefer to use the tar.bz2 file rather than the zip file but depends on your preference.
@@ -26,7 +26,7 @@ Then, Unzip the PJSIP source, if you are using the tar.bz2 file like me, unzip i
 After that, take your libvpx.a file which was previously built on your VP9 source and copy it and paste it on the <third party> libs folder of your PJSIP source which can be found on this path: /(Path of your PJSIP source)/third_party/lib
 
 Next, Go to the build.mak.in file of your PJSIP source, which can be found in /(Path of your PJSIP source)/build.mak.in 
-Open it with whichsoever notepad you use(I use atom), goto line 279 (which it usually is) or look for via search, "@LIBS@" which is in the export APP_LDLIBS command and paste "-lvpx" which will make your makefile locate for the VP9 codec library via the third_party libraries 
+Open it with whichsoever notepad you use(I use atom), goto line 279 (which where it usually is) or look for via search, "@LIBS@" which is in the export APP_LDLIBS command and paste "-lvpx" which will make your makefile locate for the VP9 codec library via the third_party libraries 
 linked to pjsip. 
 
 Your build.mak.in file, for its export APP_LDLIBS command must look like this: 
